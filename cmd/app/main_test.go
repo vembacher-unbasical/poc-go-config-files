@@ -16,6 +16,6 @@ func Test_exampleConfig(t *testing.T) {
 	decoder.KnownFields(true)
 	err := decoder.Decode(&cfg)
 	if err != nil {
-		t.Fatalf("Error parsing doras config file: %v", err)
+		t.Fatalf("Error parsing config file: %v", err)
 	}
 }
