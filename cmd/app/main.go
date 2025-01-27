@@ -6,7 +6,7 @@ import (
 )
 
 type appConfig struct {
-	Foo string `yaml:"foo"`
+	Bar string `yaml:"bar"`
 }
 
 func main() {
