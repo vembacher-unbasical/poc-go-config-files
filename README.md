@@ -6,6 +6,13 @@ This repository shows how to embedd config files into directly in order to:
 
 It does so by using `go:embed`:
 
+## Alternatives
+
+- Testing: load file in test (might break when files are moved around).
+- Printing config files: build object during runtime and deserialize (difficult to print annotated config files).
+
+## Basics
+
 ```go
 import _ "embed"
 
