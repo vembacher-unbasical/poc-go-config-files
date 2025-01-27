@@ -40,6 +40,9 @@ func Test_exampleConfig(t *testing.T) {
 	}
 }
 ```
+
+[This causing an error is demonstrated in this pull request.](https://github.com/vembacher-unbasical/poc-go-config-files/pull/1)
+
 ## Printing Config Files
 
 We now also can easily print the config files, or alternatively write it to a user defined file.
