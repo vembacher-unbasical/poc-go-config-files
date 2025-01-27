@@ -11,7 +11,14 @@ import _ "embed"
 
 //go:embed config.yaml
 var exampleConfig string
+
+// ExampleConfig ensures the example config is immutable, since we cannot embed into a const.
+func ExampleConfig() string {
+    return exampleConfig
+}
 ```
+
+## Testing
 
 The config file is now available in other packages and can be used to test if it matches the current definition:
 
@@ -32,4 +39,11 @@ func Test_exampleConfig(t *testing.T) {
 		t.Fatalf("Error parsing config file: %v", err)
 	}
 }
+```
+## Printing Config Files
+
+We now also can easily print the config files, or alternatively write it to a user defined file.
+
+```go
+fmt.Printf("%v", examples.ExampleConfig())
 ```
